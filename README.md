@@ -1,1 +1,152 @@
-# BrisaMIAMOR
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Página de Amor</title>
+    <style>
+        body {
+            background-image: url('https://m.media-amazon.com/images/I/71cyUFQFIXL._AC_UF894,1000_QL80_.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ff0000;
+        }
+
+        p {
+            font-size: 36px;
+            animation: colorChange 5s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: pink;
+            }
+            50% {
+                color: purple;
+            }
+            75% {
+                color: magenta;
+            }
+            100% {
+                color: red;
+            }
+        }
+
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            margin: 20px;
+        }
+
+        .love-message {
+            font-size: 30px;
+            color: #ff3399;
+            margin: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            margin: 10px;
+            border: 2px solid #ff3399;
+            border-radius: 10px;
+        }
+
+        /* Estilo para los corazones */
+        .hearts {
+            position: absolute;
+            font-size: 24px; /* Tamaño de corazón */
+            color: red; /* Color de corazón */
+            animation: moveHearts 2s alternate infinite; /* Animación de movimiento */
+        }
+
+        @keyframes moveHearts {
+            0%, 100% {
+                left: 20px; /* Posición inicial */
+            }
+            50% {
+                left: calc(100% - 40px); /* Posición intermedia */
+            }
+        }
+
+        /* Estilo para el botón de reproducción */
+        #play-button {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            background-color: rgba(255, 51, 153, 0.8); /* Color ligeramente transparente */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página de Amor</h1>
+    <p>¡Hola, Nicolás y Brisa!</p>
+    <p>Esta página está llena de amor y felicidad.</p>
+    <p>Espero que disfruten de cada momento juntos.</p>
+
+    <!-- Galería de Imágenes -->
+    <div class="image-gallery">
+        <img src="https://i.imgur.com/nEwQGtt.jpeg" alt="Imagen 1">
+        <img src="https://i.imgur.com/91z53n6.jpeg" alt="Imagen 2">
+        <img src="https://i.imgur.com/XCndW2G.jpeg" alt="Imagen 3">
+    </div>
+
+    <!-- Cita Romántica del Día -->
+    <div class="quote">
+        <p>"El amor no se trata de mirarse el uno al otro, sino de mirar juntos en la misma dirección." - Antoine de Saint-Exupéry</p>
+    </div>
+
+    <!-- Mensaje de Amor -->
+    <div class="love-message">
+        <p>Quiero que sepas cuánto significas para mí. Cada día a tu lado es un regalo que atesoro. Te amo más de lo que las palabras pueden expresar.</p>
+    </div>
+
+    <!-- Botón de Reproducción -->
+    <button id="play-button" onclick="playAudio()">Mi amor haz click acá para reproducir la música!</button>
+
+    <!-- Reproductor de Música -->
+    <audio id="myAudio">
+        <source src="https://raw.githubusercontent.com/Nicolascristal7/Audio/main/Baby%20Vuvu%20aka%20Cutest%20Baby%20Song%20in%20the%20world%20-%20Everybody%20Dance%20Now%20(Official%20Music%20Video).mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <!-- Corazones moviéndose en la parte superior de la página -->
+    <div class="hearts" style="top: 50px; left: 20px;">❤️</div>
+    <div class="hearts" style="top: 70px; left: 120px;">❤️</div>
+    <div class="hearts" style="top: 40px; left: 220px;">❤️</div>
+    <!-- Agrega más corazones si lo deseas -->
+
+    <!-- Script para reproducir el audio y desplazar la página -->
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            setTimeout(function() {
+                window.scrollBy(0, window.innerHeight);
+            }, 1000); // Desplaza la página hacia abajo después de 1 segundo
+        }
+    </script>
+</body>
+</html>
